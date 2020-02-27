@@ -5,6 +5,14 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import {
+    MDBBtn,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBCardText,
+    MDBCardTitle,
+} from 'mdbreact';
 
 export const IndexPageTemplate = ({
   image,
@@ -89,6 +97,21 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
+                      <MDBCard style={{ width: '22rem' }}>
+                          <MDBCardImage
+                              className='img-fluid'
+                              src='https://mdbootstrap.com/img/Photos/Others/images/43.jpg'
+                              waves
+                          />
+                          <MDBCardBody>
+                              <MDBCardTitle>Card title</MDBCardTitle>
+                              <MDBCardText>
+                                  Some quick example text to build on the card title and make up
+                                  the bulk of the card&apos;s content.
+                              </MDBCardText>
+                              <MDBBtn href='#'>MDBBtn</MDBBtn>
+                          </MDBCardBody>
+                      </MDBCard>
                     <Link className="btn" to="/products">
                       See all products
                     </Link>
